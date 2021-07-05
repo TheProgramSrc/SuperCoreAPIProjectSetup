@@ -28,9 +28,9 @@ public class Main{
     }
 
     private static String
-            scapiVersion = "4.10.2", // <-- Update if there is a new SCAPI Update
-            spigotVersion = "1.16.5-R0.1-SNAPSHOT",  // <-- Update if there is a new spigot version
-            bungeeVersion = "1.16-R0.5-SNAPSHOT"; // <-- Update if there is a new bungee version
+            scapiVersion = "5.0.0-SNAPSHOT", // <-- Update if there is a new SCAPI Update
+            spigotVersion = "1.17-R0.1-SNAPSHOT",  // <-- Update if there is a new spigot version
+            bungeeVersion = "1.17-R0.1-SNAPSHOT"; // <-- Update if there is a new bungee version
 
     public static void main(String[] args) {
         if(validateDiscord(args)){
@@ -162,7 +162,7 @@ public class Main{
     private static boolean requestVersions(){
         String scapiMetadata = "https://repo.theprogramsrc.xyz/repository/maven-public/xyz/theprogramsrc/SuperCoreAPI/maven-metadata.xml";
         String spigotMetadata = "https://hub.spigotmc.org/nexus/content/repositories/public/org/spigotmc/spigot-api/maven-metadata.xml";
-        String bungeeMetadata = "https://repo.md-5.net/repository/maven-central/net/md-5/bungeecord-api/maven-metadata.xml";
+        String bungeeMetadata = "https://hub.spigotmc.org/nexus/content/repositories/public/net/md-5/bungeecord-api/maven-metadata.xml";
         try{
             HttpRequest scapiRequest = HttpRequest.connect(scapiMetadata),
                     spigotRequest = HttpRequest.connect(spigotMetadata),
